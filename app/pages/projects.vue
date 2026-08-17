@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "Öffnungszeiten - My App in Musterstadt",
+  title: "Kontakt - My App in Musterstadt",
   meta: [
     {
       name: "description",
@@ -11,7 +11,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container-custom">Öffnungszeiten</div>
+  <div class="container-custom">Projects</div>
 </template>
 
 <style scoped></style>

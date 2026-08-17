@@ -9,7 +9,6 @@
   --color-muted: #8B8B9A;     /* secondary text */
   --color-fg: #ECECF1;        /* primary text — note: NOT pure white */
   --color-accent: #6366F1;    /* one accent, used sparingly */
-  --color-accent: #6366F1;
   --color-accent-hover: #7C7FF5;      /* primary button hover — lighter on dark */
 
   --color-border-strong: #33334A;     /* secondary button resting border */
@@ -29,13 +28,31 @@
     color: var(--color-fg);
   }
 }
-
 @layer utilities {
+  /* horizontal alignment — the single source of truth for page width + gutters */
+  .container-page {
+    @apply mx-auto max-w-7xl px-6 md:px-8;
+  }
+
+  /* content sections: same horizontal edges + section vertical rhythm */
   .container-custom {
     @apply mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24;
   }
 
   .eyebrow-tag {
     @apply text-xs font-medium uppercase tracking-[0.25em];
+  }
+
+  /* hairline that fades to transparent at both edges, strongest in the center */
+  .divider-fade {
+    height: 1px;
+    border: 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-accent) 20%,
+      var(--color-accent) 80%,
+      transparent
+    );
   }
 }

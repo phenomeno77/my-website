@@ -10,9 +10,10 @@ const legal = [
 </script>
 
 <template>
-  <footer class="border-t border-border bg-bg text-muted">
+  <footer class="bg-bg text-muted">
+    <UiDivider />
     <div
-      class="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-2 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]"
+      class="container-page grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]"
     >
       <!-- Brand -->
       <div>
@@ -76,7 +77,7 @@ const legal = [
 
     <div class="border-t border-border">
       <div
-        class="mx-auto flex max-w-6xl flex-col items-center gap-2 px-5 py-6 text-center text-xs uppercase tracking-wider text-muted sm:flex-row sm:justify-between sm:text-left md:px-8"
+        class="container-page flex flex-col items-center gap-2 py-6 text-center text-xs uppercase tracking-wider text-muted sm:flex-row sm:justify-between sm:text-left"
       >
         <p>© {{ year }} My App · Musterstadt</p>
       </div>

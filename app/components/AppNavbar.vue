@@ -27,12 +27,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header
-    class="sticky top-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md"
-  >
-    <div
-      class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 md:px-8"
-    >
+  <header class="sticky top-0 z-50 bg-bg/80 backdrop-blur-md">
+    <div class="container-page flex items-center justify-between gap-4 py-3.5">
       <!-- Brand -->
       <NuxtLink
         to="/"
@@ -118,5 +114,7 @@ onUnmounted(() => {
         </NuxtLink>
       </nav>
     </Transition>
+
+    <UiDivider />
   </header>
 </template>
