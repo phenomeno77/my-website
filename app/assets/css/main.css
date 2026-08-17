@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-svg-core/styles.css";
+
+@theme {
+  /* dark mode */
+  --color-bg: #0A0A0F;        /* page background */
+  --color-surface: #16161F;   /* cards, raised areas */
+  --color-border: #26263A;    /* hairline borders */
+  --color-muted: #8B8B9A;     /* secondary text */
+  --color-fg: #ECECF1;        /* primary text — note: NOT pure white */
+  --color-accent: #6366F1;    /* one accent, used sparingly */
+  --color-accent: #6366F1;
+  --color-accent-hover: #7C7FF5;      /* primary button hover — lighter on dark */
+
+  --color-border-strong: #33334A;     /* secondary button resting border */
+  --color-border-stronger: #4A4A63;   /* secondary button hover border */
+
+  /* Text font */
+  --font-display: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-6 py-20 md:px-8 md:py-24;
+  }
+
+  .eyebrow-tag {
+    @apply text-xs font-medium uppercase tracking-[0.25em];
+  }
+}
