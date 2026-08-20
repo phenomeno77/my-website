@@ -20,7 +20,7 @@ const base =
 
 const variants = {
   primary:
-    "rounded-lg px-5 py-2.5 bg-accent text-white hover:bg-accent-hover focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
+    "rounded-lg px-5 py-2.5 bg-accent text-on-accent hover:bg-accent-hover focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
   secondary:
     "rounded-lg px-5 py-2.5 border border-border-strong bg-transparent text-fg hover:bg-surface hover:border-border-stronger focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-bg",
   text: "rounded px-0 py-1 text-accent hover:text-accent-hover hover:underline underline-offset-4 decoration-1 focus-visible:ring-2 focus-visible:ring-accent/40",

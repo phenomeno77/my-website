@@ -17,27 +17,51 @@ useHead({
 </script>
 
 <template>
-  <div class="container-custom">
-    Homepage
+  <section>
+    <div class="container-custom">
+      <UiSectionTitle
+        eyebrow="Eyebrow"
+        title="Add title here"
+        description="Here goes the description..."
+        class="mb-20"
+      />
 
-    <UiSectionTitle
-      eyebrow="Eyebrow"
-      title="Add title here"
-      description="Here goes the description..."
-      class="mb-20"
-    />
+      <div class="flex gap-5 pt-5">
+        <UiButton>Get in touch</UiButton>
+        <UiButton variant="secondary">View work</UiButton>
 
-    <div class="flex gap-5 pt-5">
-      <UiButton>Get in touch</UiButton>
-      <UiButton variant="secondary">View work</UiButton>
+        <!-- as links -->
+        <UiButton to="/contact">Get in touch</UiButton>
+        <UiButton variant="secondary" to="/projects">View work</UiButton>
+        <!-- text variant — no box, just clickable text -->
+        <UiButton variant="text" to="/about">Learn more</UiButton>
 
-      <!-- as links -->
-      <UiButton to="/contact">Get in touch</UiButton>
-      <UiButton variant="secondary" to="/projects">View work</UiButton>
-      <!-- text variant — no box, just clickable text -->
-      <UiButton variant="text" to="/about">Learn more</UiButton>
-
-      <UiButton variant="text" to="/projects"> View all projects </UiButton>
+        <UiButton variant="text" to="/projects"> View all projects </UiButton>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section class="bg-bg-alt">
+    <div class="container-custom">
+      <UiSectionTitle
+        eyebrow="Eyebrow"
+        title="Add title here"
+        description="Here goes the description..."
+        class="mb-20"
+      />
+
+      <div class="flex gap-5 pt-5">
+        <UiButton>Get in touch</UiButton>
+        <UiButton variant="secondary">View work</UiButton>
+
+        <!-- as links -->
+        <UiButton to="/contact">Get in touch</UiButton>
+        <UiButton variant="secondary" to="/projects">View work</UiButton>
+        <!-- text variant — no box, just clickable text -->
+        <UiButton variant="text" to="/about">Learn more</UiButton>
+
+        <UiButton variant="text" to="/projects"> View all projects </UiButton>
+      </div>
+    </div>
+  </section>
 </template>
