@@ -1,100 +1,52 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-svg-core/styles.css";
 
+/* default palette lives in @theme so all utilities are generated */
 @theme {
-  /* bg page background */
-  /* surface cards, raised areas */
-  /* border hairline borders */
-  /* muted secondary text */
-  /* fg primary text — note: NOT pure white */
-  /* accent primary button background, one accent, used sparingly */
-  /* on accent primary button text */
-  /* accent hover primary button hover — lighter on dark   */
-  /* border strong secondary button resting border   */
-  /* border stronger secondary button hover border  */
+  --color-bg: #080B13;        --color-surface: #16161F;
+  --color-border: #26263A;    --color-muted: #8B8B9A;
+  --color-fg: #ECECF1;        --color-accent: #6366F1;
+  --color-accent-hover: #7C7FF5;
+  --color-border-strong: #33334A;  --color-border-stronger: #4A4A63;
+  --color-on-accent: #FFFFFF; --color-bg-alt: #0D111B;
+  --color-hero-glow: rgba(99,102,241,0.12);
+}
 
-  /* dark mode violet*/
-  --color-bg: #080B13;        
-  --color-surface: #16161F;   
-  --color-border: #26263A;    
-  --color-muted: #8B8B9A;     
-  --color-fg: #ECECF1;        
-  --color-accent: #6366F1;    
-  --color-accent-hover: #7C7FF5;     
-  --color-border-strong: #33334A;    
-  --color-border-stronger: #4A4A63;   
-  --color-on-accent: #FFFFFF; 
-  --color-bg-alt: #0D111B;
- 
-  
-  /* Sapphire */
-  /* --color-bg: #080B13;         
-  --color-surface: #141926;   
-  --color-border: #262E44;    
-  --color-muted: #808AA3;     
-  --color-fg: #EAEDF5;         
-  --color-accent: #3862DB;     
-  --color-accent-hover: #567EEA;   
-  --color-border-strong: #333C56;     
-  --color-border-stronger: #495372;   
-  --color-on-accent: #EAEDF5;
-  --color-bg-alt: #0D111B; */
-
-  /* Dark Warm Amber */
-  /* --color-bg: #0C0B09;        
-  --color-surface: #191712;    
-  --color-border: #2C2820;    
-  --color-muted: #9C9384;      
-  --color-fg: #F3F0EA;         
-  --color-accent: #D9A45B;     
-  --color-accent-hover: #E8BC7E;     
-  --color-border-strong: #3A352B;     
-  --color-border-stronger: #524B3C;    
-  --color-on-accent: #191712;
-  --color-bg-alt: #11100D;
-  */
-
-  /* Dark emerald - greenish*/
-  /* --color-bg: #070E0C;         
-  --color-surface: #121E1A;    
-  --color-border: #223029;     
-  --color-muted: #84988E;      
-  --color-fg: #E9F1ED;         
-  --color-accent: #2DD4A7;     
-  --color-accent-hover: #4FE8BE;      
-  --color-border-strong: #2E4038;    
-  --color-border-stronger: #41594F;    
-  --color-on-accent: #0B1512; 
-  --color-bg-alt: #0B1412; */
-
-    /* Dark emerald - darker*/
-  /* --color-bg: #080B13;         
-  --color-surface: #121E1A;    
-  --color-border: #223029;     
-  --color-muted: #84988E;      
-  --color-fg: #E9F1ED;         
-  --color-accent: #17A67C;     
-  --color-accent-hover: #2BC194;     
-  --color-on-accent: #FFFFFF; 
-  --color-border-strong: #2E4038;     
-  --color-border-stronger: #41594F;   
-   --color-bg-alt: #0E0F18; */
-
-  /* Dusty Rose */
-  /* --color-bg: #0D0A0D;      
-  --color-surface: #1B151B;    
-  --color-border: #2E2530;     
-  --color-muted: #9C8E99;     
-  --color-fg: #F1ECF0;        
-  --color-accent: #D96A8C;     
-  --color-accent-hover: #E88AA6;    
-  --color-on-accent: #EAEDF5;
-  --color-border-strong: #3B2F3D;     
-  --color-border-stronger: #544456;
-  --color-bg-alt: #130E13;    */
-
-  /* Text font */
-  --font-display: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+/* runtime palettes override the same tokens */
+:root[data-theme="sapphire"] {
+  --color-bg:#080B13; --color-surface:#141926; --color-border:#262E44;
+  --color-muted:#808AA3; --color-fg:#EAEDF5; --color-accent:#3862DB;
+  --color-accent-hover:#567EEA; --color-border-strong:#333C56;
+  --color-border-stronger:#495372; --color-on-accent:#EAEDF5;
+  --color-bg-alt:#0D111B; --color-hero-glow:rgba(56,98,219,0.14);
+}
+:root[data-theme="amber"] {
+  --color-bg:#0C0B09; --color-surface:#191712; --color-border:#2C2820;
+  --color-muted:#9C9384; --color-fg:#F3F0EA; --color-accent:#D9A45B;
+  --color-accent-hover:#E8BC7E; --color-border-strong:#3A352B;
+  --color-border-stronger:#524B3C; --color-on-accent:#191712;
+  --color-bg-alt:#11100D; --color-hero-glow:rgba(217,164,91,0.10);
+}
+:root[data-theme="emerald"] {
+  --color-bg:#080B13; --color-surface:#121E1A; --color-border:#223029;
+  --color-muted:#84988E; --color-fg:#E9F1ED; --color-accent:#17A67C;
+  --color-accent-hover:#2BC194; --color-border-strong:#2E4038;
+  --color-border-stronger:#41594F; --color-on-accent:#FFFFFF;
+  --color-bg-alt:#0E0F18; --color-hero-glow:rgba(23,166,124,0.12);
+}
+:root[data-theme="wine"] {
+  --color-bg:#0E0A0C; --color-surface:#1C1418; --color-border:#2E2126;
+  --color-muted:#9D8A90; --color-fg:#F2ECEE; --color-accent:#C0334A;
+  --color-accent-hover:#D64E63; --color-border-strong:#3B2A30;
+  --color-border-stronger:#543B43; --color-on-accent:#F2ECEE;
+  --color-bg-alt:#140E11; --color-hero-glow:rgba(192,51,74,0.12);
+}
+:root[data-theme="rose"] {
+  --color-bg:#0D0A0D; --color-surface:#1B151B; --color-border:#2E2530;
+  --color-muted:#9C8E99; --color-fg:#F1ECF0; --color-accent:#D96A8C;
+  --color-accent-hover:#E88AA6; --color-border-strong:#3B2F3D;
+  --color-border-stronger:#544456; --color-on-accent:#EAEDF5;
+  --color-bg-alt:#130E13; --color-hero-glow:rgba(217,106,140,0.10);
 }
 
 @layer base {
@@ -107,6 +59,13 @@
     color: var(--color-fg);
   }
 }
+
+@layer components{
+  .hero {
+    background: radial-gradient(75% 55% at 50% 0%, var(--color-hero-glow), var(--color-bg) 70%);
+  }
+}
+
 @layer utilities {
   /* horizontal alignment — the single source of truth for page width + gutters */
   .container-page {

@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <section>
+  <section class="hero">
     <div class="container-custom">
       <UiSectionTitle
         eyebrow="Eyebrow"
