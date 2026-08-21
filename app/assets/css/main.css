@@ -32,7 +32,7 @@
   --color-muted:#84988E; --color-fg:#E9F1ED; --color-accent:#17A67C;
   --color-accent-hover:#2BC194; --color-border-strong:#2E4038;
   --color-border-stronger:#41594F; --color-on-accent:#FFFFFF;
-  --color-bg-alt:#0E0F18; --color-hero-glow:rgba(23,166,124,0.12);
+  --color-bg-alt:#0D111B; --color-hero-glow:rgba(23,166,124,0.12);
 }
 :root[data-theme="wine"] {
   --color-bg:#0E0A0C; --color-surface:#1C1418; --color-border:#2E2126;
